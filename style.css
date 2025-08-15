@@ -1,0 +1,408 @@
+/*
+    ------------------------------
+    GLOBAL STYLES & TYPOGRAPHY
+    ------------------------------
+*/
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --white-color: #ffffff;
+    --dark-color: #212529;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/*
+    ------------------------------
+    HEADER & NAVIGATION
+    ------------------------------
+*/
+
+header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav .logo a {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/*
+    ------------------------------
+    HERO & PROFILE SECTION
+    ------------------------------
+*/
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 2rem;
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.profile-photo-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/*
+    ------------------------------
+    SECTIONS & CONTAINERS
+    ------------------------------
+*/
+
+section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    background-color: var(--primary-color);
+}
+
+/*
+    ------------------------------
+    PRAKERIN SECTION
+    ------------------------------
+*/
+
+.prakerin-section {
+    background-color: var(--white-color);
+}
+
+.prakerin-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.prakerin-item {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.prakerin-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prakerin-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/*
+    ------------------------------
+    MOMENT SECTION
+    ------------------------------
+*/
+
+.moment-section {
+    background-color: var(--background-color);
+    padding: 6rem 2rem;
+}
+
+.moment-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+.moment-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.moment-item {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.moment-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.moment-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.moment-item p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.moment-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    
+}
+
+/*
+    ------------------------------
+    KONTAK SECTION
+    ------------------------------
+*/
+
+.kontak-section {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.kontak-section h2 {
+    color: var(--white-color);
+    margin-bottom: 1rem; /* Jarak judul dengan subjudul lebih dekat */
+}
+
+.kontak-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem; /* Jarak subjudul dengan tombol kontak */
+    max-width: 500px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kontak-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Kurangi jarak antar tombol */
+    flex-wrap: wrap;
+    margin-top: 0; /* Hapus margin-top tambahan */
+}
+
+.kontak-list li {
+    transition: transform 0.3s ease;
+}
+
+.kontak-list li a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kontak-list li a:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*
+    ------------------------------
+    FOOTER
+    ------------------------------
+*/
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #495057;
+}
+
+/*
+    ------------------------------
+    RESPONSIVE DESIGN
+    ------------------------------
+*/
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .prakerin-container,
+    .moment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .kontak-list {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    
+}
+.profile-photo:hover {
+        transform: scale(1.1);
+    }
+.cv-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
