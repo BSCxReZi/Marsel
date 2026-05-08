@@ -16,5 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         });
+        // Menambahkan kelas 'active' pada tautan yang diklik dan menghapusnya dari tautan lainnya
+        link.addEventListener('click', () => {
+            for (const otherLink of navLinks) {
+                otherLink.classList.remove('active');
+            }
+            link.classList.add('active');
+        });
+        // Menambahkan event listener untuk mengubah warna tautan saat diklik
+        link.addEventListener('click', () => {
+            link.style.color = 'red'; // Ganti dengan warna yang diinginkan
+        });
+        // Menambahkan event listener untuk mengubah warna tautan saat mouse hover
+        link.addEventListener('mouseover', () => {
+            link.style.color = 'blue'; // Ganti dengan warna yang diinginkan
+        });
+        link.addEventListener('mouseout', () => {
+            link.style.color = ''; // Kembalikan ke warna default
+        });
     }
 });
